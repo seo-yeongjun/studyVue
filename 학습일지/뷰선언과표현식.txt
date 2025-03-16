@@ -1,0 +1,21 @@
+뷰는
+new Vue({})로 생성한다.
+
+new Vue는 매개변수로 객체를 받는다.
+객체에는
+el: 뷰 인스턴스가 그려질 지점을 지정한다.
+data: 뷰 인스턴스에서 사용할 데이터를 정의한다.
+등등이 있다.
+
+{{}} 표현식 으로 데이터를 출력할 수 있다.
+    ex)
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue.js!'
+        }
+    })
+
+    <div id="app">
+        {{ message }}
+    </div>
