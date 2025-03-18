@@ -10,6 +10,19 @@
     <div class = "card">
         <img :src = "image" alt = "A Vue logo">
     </div>
+    <p v-if="productNumber > 10">In Stock</p>
+    <p v-show="productNumber > 10">In Stock</p>
+
+    <div id="counter">
+        <h1>{{number}}</h1>
+        <button @click="number+=1">Increment</button>
+        <button v-on:click="number-=1">Decrement</button>
+        <button @click="resetNumber">Reset</button>
+    </div>
+    <ul>
+        <li v-for="number in oneTohundred" key="number">{{ number }}</li>
+    </ul>
+
 </div>
 </body>
 <!-- vue2 cdn -->

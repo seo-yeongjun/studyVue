@@ -1,0 +1,27 @@
+v-if 와 v-show를 통해 조건부 렌더링을 할 수 있다.
+v-if 는 렌더링 여부를 결정하고,
+v-show 는 display 속성을 조절한다. (display: none;)
+
+v-if 예시)
+new Vue({
+    el: '#app',
+    data: {
+        isShow: true
+    }
+})
+
+<div id="app">
+    <p v-if="isShow">Hello Vue.js!</p>
+</div>
+
+v-show 예시)
+new Vue({
+    el: '#app',
+    data: {
+        isShow: true
+    }
+})
+
+<div id="app">
+    <p v-show="isShow">Hello Vue.js!</p>
+</div>

@@ -1,0 +1,16 @@
+v-for 는 반복문 처럼 배열의 요소를 순회하며 렌더링 할 수 있다.
+이때 key를 지정해 주는 것이 좋다. (렌더링시, key를 통해 재렌더링 여부를 판단 하여 성능에 도움)
+
+v-for 예시)
+new Vue({
+    el: '#app',
+    data: {
+        items: [{id : 1, name: 'apple'}, {id : 2, name: 'banana'}, {id : 3, name: 'cherry'}]
+    }
+})
+
+<div id="app">
+    <ul>
+        <li v-for="item in items" :key="item.id">{{ item.name }}</li>
+    </ul>
+</div>

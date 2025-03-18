@@ -1,0 +1,23 @@
+v-on은 메소드 호출을 위한 이벤트 리스너를 추가할 수 있다.
+축약어로 @를 사용할 수 있다.
+
+어떻게 methods 객체에서 data의 값에 this 로 접근할 수 있는지 궁금했는데,
+Vue 객체 생성시, data의 값들을 프록시로 만들어서 this로 접근할 수 있게 한다고 한다.
+
+예시)
+
+new Vue({
+    el: '#app',
+    data: {
+        message: 'Hello Vue.js!'
+    },
+    methods: {
+        sayHello: function() {
+            alert(this.message)
+        }
+    }
+})
+
+<div id="app">
+    <button @click="sayHello">Click me!</button>
+</div>
