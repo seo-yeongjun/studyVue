@@ -1,0 +1,31 @@
+component는 vue 의 모듈 단위로 재사용을 위해 사용한다.
+props는 부모 컴포넌트에서 자식 컴포넌트로 데이터를 전달할 때 사용한다.
+
+이때 <component> 는 kebab-case로 작성해야한다.
+
+component 와 props 예시)
+        <!-- js -->
+        Vue.component('my-component', {
+            props: ['my-message'],
+            template: '<p>{{ myMessage }}</p>'
+        })
+
+        Vue.component('data-component', {
+            data: function() {
+                return {
+                    message: 'Hello Vue.js!'
+                }
+            },
+            template: '<my-component :my-message="message"></my-component>'
+        })
+
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue.js!'
+            }
+        })
+        <!-- html -->
+        <div id="app">
+            <data-component></data-component>
+        </div>

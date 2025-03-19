@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="componentAndPropsApp">
+    <whether-month-div :month="months[monthsIndex]"></whether-month-div>
+    <button @click="monthPlus">Next Month</button>
+    <button @click="monthMinus">Previous Month</button>
+</div>
+</body>
+<!-- vue2 cdn -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="main.js"></script>
+</html>

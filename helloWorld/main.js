@@ -18,7 +18,6 @@ const app = new Vue({
     methods: {
         resetNumber : function(){
             this.number = 0;
-            console.log(this.number)
         }
     }
 })
